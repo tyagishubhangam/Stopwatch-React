@@ -1,0 +1,128 @@
+/* Page-level styles */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  font-family: 'Space Mono', monospace;
+}
+
+/* Stopwatch container */
+.stopwatch {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  text-align: center;
+  width: 300px;
+}
+
+/* Time display */
+.display {
+  font-size: 3.5rem;
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(10, 175, 230, 0.3);
+  margin-bottom: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* Controls container */
+.controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* Button styles */
+.stopwatch button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-family: 'Space Mono', monospace;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin: 0 10px;  /* Added horizontal spacing between buttons */
+  margin-top: 15px; /* Added vertical spacing between buttons */
+}
+
+/* Start button */
+.start-btn {
+  background: #4CAF50;
+  color: white;
+}
+
+.start-btn:hover {
+  background: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+}
+
+/* Stop button */
+.stop-btn {
+  background: #f44336;
+  color: white;
+}
+
+.stop-btn:hover {
+  background: #da190b;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(244, 67, 54, 0.4);
+}
+
+/* Reset button */
+.reset-btn {
+  background: #2196F3;
+  color: white;
+}
+
+.reset-btn:hover {
+  background: #1976D2;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(33, 150, 243, 0.4);
+}
+
+/* Button container to ensure proper spacing */
+.stopwatch > button {
+  display: inline-block;
+  margin-bottom: 15px; /* Added bottom margin for vertical spacing */
+}
+
+/* Responsive design */
+@media (max-width: 400px) {
+  .stopwatch {
+      width: 85%;
+      padding: 1.5rem;
+  }
+
+  .display {
+      font-size: 2.5rem;
+  }
+
+  .stopwatch button {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+      margin: 8px 6px; /* Adjusted spacing for mobile */
+  }
+}
+
+/* Button active state */
+.stopwatch button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Optional: Add smooth transition for all elements */
+* {
+  transition: all 0.3s ease-in-out;
+}
